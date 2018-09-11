@@ -1,0 +1,35 @@
+#todo-list {
+  margin-top: 10px;
+
+}
+#todo-input {
+  margin-bottom: 5px;
+}
+
+#task-todo {
+  color: #0000FF;
+}
+
+.todo {
+  margin-bottom: 10px;
+  opacity: 0;
+  -webkit-animation: fadeIn .5s linear forwards;
+  -moz-animation: fadeIn .5s linear forwards;
+  animation: fadeIn .5s linear forwards;
+}
+
+#add-button {
+  width: 100px;
+}
+
+#remove-button {
+  width: 80px;
+  margin-right: 10px;
+
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
