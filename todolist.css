@@ -1,6 +1,19 @@
+.container {
+  width: 1000px;
+  color: grey
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.heading {
+font-size: 1rem;
+text-align: center;
+}
+
 #todo-list {
   margin-top: 10px;
-
 }
 #todo-input {
   margin-bottom: 5px;
@@ -16,6 +29,13 @@
   -webkit-animation: fadeIn .5s linear forwards;
   -moz-animation: fadeIn .5s linear forwards;
   animation: fadeIn .5s linear forwards;
+}
+
+.mark-complete {
+  float: left;
+  width: 80px;
+  display: block;
+  cursor: pointer;
 }
 
 #add-button {

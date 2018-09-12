@@ -6,18 +6,18 @@ $(document).ready(function() {
 
   // request tasks
   var requestTask = function() {
+
     $.ajax({
       type: 'GET',
       url: 'https://altcademy-to-do-list-api.herokuapp.com/tasks?api_key=51',
       dataType: 'json',
       success: function (response, textStatus) {
+        var tasksObjArr = response.tasks;
         todoList.empty();
-        response.tasks.forEach(function(task){
-           todoList.append('<p class="col-xs-6" id="task-todo">' + task.content + '</p><button id="remove-button" type="button" class="btn btn-danger" data-id="' + task.id +'">Remove</button><input type="checkbox" class="mark-complete" data-id="' + task.id + '"' + (task.completed ? 'checked' : '') + '><br><br>');
+        tasksObjArr.forEach(function(task){
+           todoList.append(
+             '<input type="checkbox" class="mark-complete" data-id="' + task.id + '"' + (task.completed ? 'checked' : '') + '><p class="col-xs-6" id="task-todo">' + task.content + '</p><button id="remove-button" type="button" class="btn btn-danger" data-id="' + task.id + '">Remove</button><br><br>');
         });
-      
-        console.log(completedTasks)
-
       },
       error: function (request, textStatus, errorMessage) {
         console.log(errorMessage);
